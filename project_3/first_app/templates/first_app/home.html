@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>teri baho main aisa uljha jia</h1>
+    <h1>Author: {{author}} <br> Age: {{age}} <br> list: {{lst | join:", "}}</h1>
+    <h1>Birth: {{birth | date:"D d M Y"}} </h1>
+
+    <!--conditional statements-->
+
+    {% if age >= 20 %}
+        <h4>You will get driving license</h4>
+    {% elif age >= 10 and age <= 19 %}
+        <h4>You will not get driving license right now</h4>
+    {% else %}
+        <h4>You are child now.</h4>
+    {% endif %}
+
+    <!-- for loop -->
+
+    {% for i in courses %}
+        <h3>{{i}}</h3>
+    {% endfor %}
+</body>
+</html>
