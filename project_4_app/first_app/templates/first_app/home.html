@@ -13,6 +13,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+
+    <nav>
+      <ul>
+        <li><a href="{% url 'home' %}">home</a></li>
+        <li><a href="{% url 'about' %}">about</a></li>
+      </ul>
+    </nav>
+
+    <h1> {{id.name}} </h1>
+
     <h1>This is home page</h1>
 
     <img src="{% static 'bird_2.jpg' %}" alt="bird_img">

@@ -35,3 +35,8 @@ def home(request):
         },
     ]
     return render(request, 'first_app/home.html', {'data': data})
+
+
+def about(request):
+    print(request.GET)
+    return render(request, 'first_app/home.html', {'id': request.GET})
