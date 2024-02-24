@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="{% url "about" %}" method="POST">
+    {% csrf_token %}
+    <label for="name">Name </label>
+    <input class="border border-black" type="text" name='username'>
+    <br>
+    <label for="email">Email </label>
+    <input class="border border-black" type="email" name='email'>
+    <br>
+    <select name="select" id="">
+        <option selected>Rate yourself</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <br>
+    <button class="border border-black" type="submit">Submit</button>
+</form>
+
+{% endblock content %}
